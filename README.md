@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:161b22&height=100&section=header&text=Shekaf&fontSize=40&fontColor=e6edf3&animation=twinkling"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:161b22&height=100&section=header&text=Nexvior&fontSize=40&fontColor=e6edf3&animation=twinkling"/>
 
 **I find cracks.** Systems, rules, assumptions.
 
