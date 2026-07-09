@@ -1,130 +1,147 @@
-<pre>
-<code><span style="color:#8b949e">┌─</span> <span style="color:#3fb950">nexvior@lab</span> <span style="color:#8b949e">── ~/workspace ──────────────────────────────────────┐</span>
-<span style="color:#8b949e">│</span>  kernel: linux amd64 · session active · offensive research mode   <span style="color:#8b949e">│</span>
-<span style="color:#8b949e">└──────────────────────────────────────────────────────────────────┘</span>
+```text
+nexvior@lab ~ $ ./boot
+[ok] session start
+[ok] load profile: offensive security / builder
+[ok] link: https://novau.xyz
+```
 
-<span style="color:#3fb950">nexvior@lab</span><span style="color:#8b949e">:~$</span> whoami
-nexvior — security tooling, malware analysis, breaking things on purpose
+<br/>
 
-<span style="color:#3fb950">nexvior@lab</span><span style="color:#8b949e">:~$</span> cat .env
-WEB=https://novau.xyz
-LANG=python, bash, lua
-FOCUS=offensive security, recon, pentest automation, malware
+```text
+                         ┌─────────────────────────────────────┐
+                         │  nexvior@lab          tty1  online  │
+                         └─────────────────────────────────────┘
 
-<span style="color:#3fb950">nexvior@lab</span><span style="color:#8b949e">:~$</span> tree ~/builds -L 2 --dirsfirst
-~/builds
-├── arsenal/
-│   ├── portscan/          # tcp/udp scanners, banner grab, rate control
-│   ├── recon/             # osint + infra mapping toolkit
-│   ├── pentest/           # vuln checks, fuzz helpers, exploit utilities
-│   ├── tg-bots/           # telegram automation & alert pipelines
-│   ├── web/               # sites, panels, landing pages
-│   └── malware-lab/       # static analysis notes, ioc extraction
-├── scripts/
-│   └── one-off breakers   # quick probes, dirty hacks, throwaway tests
-└── notes/
-    └── writeups/          # ctf, samples, postmortems
+nexvior@lab ~ $ neofetch --offline
 
-<span style="color:#3fb950">nexvior@lab</span><span style="color:#8b949e">:~$</span> ./arsenal/portscan/ --help
-portscan module
-  scan_tcp        async connect scan, custom thread pool
-  scan_udp        udp probe with configurable payload list
-  grab_banner     service fingerprint after open port hit
-  export_json     dump results for bots / web panels
-  # wip: syn scan when raw socket layer is ready
+       .---.                    nexvior@lab
+      /     \                   ─────────────
+      \.@-@./                   role: security · builder
+       /`\_`\                    site: novau.xyz
+      //  _  \\                  shell: bash
+     | \     )|_                 editor: vim
+    /`\_`>  <_/ \                vcs: git
+    \__________/
 
-<span style="color:#3fb950">nexvior@lab</span><span style="color:#8b949e">:~$</span> ./arsenal/recon/ --help
-recon module
-  sub_enum        subdomain discovery, permutations, dns brute
-  dns_dump        a/aaaa/mx/txt/cname collection
-  whois_track     registrar + nameserver pivot
-  http_probe      live host detection, title grab, status map
-  path_brute      directory & file discovery
-  tech_id           stack detection from headers & html
-  ip_range        cidr expand + reverse ptr sweep
-  report_merge    combine outputs into single recon report
-  # not a single script — pipeline of small tools that chain together
+nexvior@lab ~ $ whoami
+security-focused developer. python-first.
+i build tools, bots, and small web surfaces — then point them at
+systems to see what leaks, opens, or breaks.
 
-<span style="color:#3fb950">nexvior@lab</span><span style="color:#8b949e">:~$</span> ./arsenal/pentest/ --help
-pentest module
-  svc_audit       weak config checks on common services
-  cred_spray      controlled login attempts (lab / authorized only)
-  inj_probe       parameter fuzzing for sqli/xss/ssrf patterns
-  header_test     security header analysis & bypass attempts
-  ssl_check       cert chain, cipher, expiry issues
-  pivot_helper    tunnel & proxy glue for internal movement tests
-  # built for learning and authorized scopes — not a script kiddie toy
+not a toolkit collector. i write my own when existing ones lie
+or when i need something that fits a specific chain.
 
-<span style="color:#3fb950">nexvior@lab</span><span style="color:#8b949e">:~$</span> ls ~/builds/arsenal/tg-bots/
-alertd/           # push scan results & uptime alerts to telegram
-logtail-bot/      # tail logs, filter ioc, forward to chat
-cmd-bot/          # remote trigger for approved scripts
-monitor/          # vps health, disk, failed auth attempts
-# bots are the glue — scanners write json, bots notify, web displays
+nexvior@lab ~ $ ls -1 ~/work/
+telegram-bots/
+web/
+scanners/
+pentest-tools/
+recon/
+malware-notes/
 
-<span style="color:#3fb950">nexvior@lab</span><span style="color:#8b949e">:~$</span> ls ~/builds/arsenal/web/
-novau.xyz         # personal site — not the tool dump, just the front door
-panel/            # internal dashboards for scan & recon output
-static-sites/     # fast deploy pages, minimal attack surface
-api-bridge/       # hook python tools to web frontend
+nexvior@lab ~ $ cat ~/work/telegram-bots/about
+────────────────────────────────────────
+telegram automation
+────────────────────────────────────────
+  · alert bots for logs, uptime, scan results
+  · admin panels for triggering jobs remotely
+  · notification pipelines (vps → bot → channel)
+  · long-running workers on linux vps
+  · stack: python, aiogram / python-telegram-bot
+  · deploy: systemd, docker when it makes sense
 
-<span style="color:#3fb950">nexvior@lab</span><span style="color:#8b949e">:~$</span> ls ~/builds/arsenal/malware-lab/
-static/           # strings, imports, entropy, pe/elf basics
-sandbox-notes/    # behavior logs from isolated runs
-ioc-out/          # hashes, domains, mutexes — extracted manually
-# still growing. malware is read, not worshipped.
+nexvior@lab ~ $ cat ~/work/web/about
+────────────────────────────────────────
+web
+────────────────────────────────────────
+  · landing pages and project fronts
+  · dashboards for tool output / status views
+  · fast static setups when possible
+  · backend hooks when a tool needs a face
+  · novau.xyz lives here
 
-<span style="color:#3fb950">nexvior@lab</span><span style="color:#8b949e">:~$</span> git status
-On branch main
-nothing committed yet — public repos shipping soon
-local builds only for now
+nexvior@lab ~ $ cat ~/work/scanners/about
+────────────────────────────────────────
+scanners
+────────────────────────────────────────
+  · tcp port scanners (connect / basic syn-style workflows)
+  · banner grabbing and service probing
+  · host discovery helpers for lab targets
+  · async python — built for my own runs, not demo scripts
+  · output: plain text / json for piping into other tools
 
-<span style="color:#3fb950">nexvior@lab</span><span style="color:#8b949e">:~$</span> curl -sI https://novau.xyz | head -n 1
+nexvior@lab ~ $ cat ~/work/pentest-tools/about
+────────────────────────────────────────
+pentest utilities
+────────────────────────────────────────
+  · small helpers for authorized lab testing
+  · payload formatters and request mutators
+  · brute-force wrappers with sane rate limits
+  · custom checks for misconfigs i keep hitting
+  · chained with scanners + recon, not standalone magic
+
+nexvior@lab ~ $ cat ~/work/recon/about
+────────────────────────────────────────
+recon (partial tooling)
+────────────────────────────────────────
+  · subdomain enumeration scripts
+  · dns / whois / cert fragment collectors
+  · target prep before deeper scanning
+  · not shipping a full recon suite — focused scripts
+    that do one thing and log cleanly
+
+nexvior@lab ~ $ cat ~/work/malware-notes/about
+────────────────────────────────────────
+malware
+────────────────────────────────────────
+  · static analysis notes and ioc extraction
+  · sandbox observation logs
+  · mapping behavior → detection surface
+  · private notes mostly; public write-ups when ready
+
+nexvior@lab ~ $ cat ~/stack/runtime
+python 3.x · linux · bash · lua (side projects)
+learning: c++
+infra: linux vps, ssh, nginx, systemd
+
+nexvior@lab ~ $ git -C ~/public status
+fatal: '~/public' is empty — first repos not pushed yet
+
+nexvior@lab ~ $ tail -3 ~/log/today
+building port scanner refactor
+telegram bot: alert routing rewrite
+drafting first public release
+
+nexvior@lab ~ $ curl -I https://novau.xyz 2>/dev/null | head -1
 HTTP/2 200
 
-<span style="color:#3fb950">nexvior@lab</span><span style="color:#8b949e">:~$</span> <span style="color:#8b949e">_</span>
-</code></pre>
+nexvior@lab ~ $ █
+```
 
 <br/>
 
 <details>
-<summary><code>nexvior@lab:~$ cat ~/builds/arsenal/recon/pipeline.example</code></summary>
+<summary><code>nexvior@lab ~ $ tree ~/work --dirs-only</code></summary>
 
-<pre>
-<code># typical recon chain i actually run — order changes per target
-
-1. sub_enum      → collect hostnames
-2. dns_dump      → resolve everything
-3. http_probe    → find what's alive
-4. tech_id       → map stack
-5. path_brute    → hit hidden paths on live hosts
-6. portscan      → full port pass on interesting ips
-7. report_merge  → one folder, one timeline, one picture
-
-output lands in ./out/YYYYMMDD-target/
-feeds tg-bots for alerts, web panel for browsing
-</code></pre>
+```text
+~/work/
+├── telegram-bots/     monitoring · alerts · remote triggers
+├── web/               novau.xyz · tool frontends · dashboards
+├── scanners/          port scan · banners · service probe
+├── pentest-tools/     lab helpers · mutators · misconfig checks
+├── recon/             subdomain · dns · whois · target prep
+└── malware-notes/     analysis · ioc · behavior mapping
+```
 
 </details>
 
 <details>
-<summary><code>nexvior@lab:~$ cat ~/builds/stack</code></summary>
+<summary><code>nexvior@lab ~ $ cat ~/contact</code></summary>
 
-<pre>
-<code>python     primary — scanners, bots, glue code
-linux      daily driver — vps, hardening, deployment
-bash       quick and dirty when speed > elegance
-lua        game tooling, scripting experiments
-web        html/css/js — sites and internal panels
-telegram   bot api — notifications, remote ops
-malware    static analysis, ioc, lab notes
-cpp        learning next — performance-critical tools later
-</code></pre>
+```text
+site:   https://novau.xyz
+github: https://github.com/Nexvior
+status: public repos loading — tools exist locally first
+```
 
 </details>
-
-<p align="right">
-<sub>novau.xyz · repos going public when ready · profile views below</sub>
-</p>
-
-![](https://komarev.com/ghpvc/?username=Nexvior&color=3fb950&style=flat-square)
