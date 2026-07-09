@@ -1,29 +1,25 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:161b22&height=100&section=header&text=Nexvior&fontSize=40&fontColor=e6edf3&animation=twinkling"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:161b22&height=110&section=header&text=Nexvior&fontSize=42&fontColor=e6edf3&animation=twinkling"/>
 
-**I find cracks.** Systems, rules, assumptions.
+**Cybersecurity · Python · Telegram bots · malware analysis**  
+*Breaking systems to understand them.*
 
-Building small security tools in Python · Linux · VPS · malware analysis curiosity.
-
-🌐 [your-website.com](https://your-website.com)
-
+🌐 [novau.xyz](https://novau.xyz)
 ---
 
 ### Focus
-`Offensive Security` · `Python Tooling` · `Linux/VPS` · `Malware Analysis` · `Recon` · `Lua`
+`Offensive Security` · `Python Tooling` · `Malware Analysis` · `Telegram Bots` · `Web` · `Linux`
 
-### Pinned Work
-| Project | Description |
-|---------|-------------|
-| [**repo-1**](https://github.com/YOUR_USER/repo-1) | Short recon / scan utility |
-| [**repo-2**](https://github.com/YOUR_USER/repo-2) | Telegram bot / automation |
-| [**repo-3**](https://github.com/YOUR_USER/repo-3) | Linux VPS hardening or deploy scripts |
+### Now
+- Building security utilities in Python
+- Exploring malware behavior & analysis
+- Developing Telegram automation tools
 
 ### Stack
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
-![Lua](https://img.shields.io/badge/Lua-2C2D72?style=flat-square&logo=lua&logoColor=white)
-![C++](https://img.shields.io/badge/C++-learning-00599C?style=flat-square&logo=cplusplus&logoColor=white)
+![Telegram](https://img.shields.io/badge/Telegram-26A5E4?style=flat-square&logo=telegram&logoColor=white)
+![Security](https://img.shields.io/badge/Focus-Cybersecurity-3fb950?style=flat-square)
 
 ---
 
-<sub>Currently learning C++ · Open to collab on security tooling</sub>
+<sub>Repositories coming soon · Open to collab on security tooling</sub>
